@@ -1,0 +1,9 @@
+class Hello {
+    public static void main(String a[]) {
+        int num1 = 4;
+        byte by = 127;
+        short sh = 558;
+        float f = 5.4f;
+
+    }
+}
