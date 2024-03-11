@@ -1,0 +1,14 @@
+class Hello {
+    public static void main(String args[]) {
+        int x = 6;
+        int y = 4;
+        int a =1;
+        int b =2;
+        boolean result = x>y && a>b;
+        boolean res = x>y || a>b;
+
+        System.out.println(result);
+        System.out.println(res);
+
+    }
+}
