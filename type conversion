@@ -1,0 +1,8 @@
+class Hello {
+    public static void main(String a[]) {
+       byte d = 10;
+       byte b = 30;
+       int result = d * b;
+       System.out.println(result);
+    }
+}
