@@ -1,3 +1,5 @@
+//IF Else statement
+
 class Hello {
     public static void main(String args[]) {
         int x = 6;
@@ -6,5 +8,22 @@ class Hello {
         else
             System.out.println("hiii");
         
+    }
+}
+
+
+///////////////////////////////////////////////////////////
+class Hello {
+    public static void main(String args[]) {
+       int x = 6;
+        int y = 3;
+        int z = 2;
+        if(x>y &&x>z)
+            System.out.println(x);
+        else if (y>x && y>z)
+            System.out.println(y);
+        else
+            System.out.println(z);
+
     }
 }
