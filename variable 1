@@ -1,0 +1,69 @@
+// instance variable
+
+import java.util.*;
+
+class Mobile {
+    String brand;
+    int price;
+    String name;
+
+    public void show() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Price: " + price);
+        System.out.println("Name: " + name);
+    }
+}
+
+public class Main {
+    public static void main(String args[]) {
+        Mobile obj1 = new Mobile();
+        obj1.brand = "Apple";
+        obj1.price = 15000;
+        obj1.name = "iphone";
+
+        Mobile obj2 = new Mobile();
+        obj2.brand = "Samsung";
+        obj2.price = 15000;
+        obj2.name = "m32 5g";
+
+        obj1.show();
+        obj2.show();
+    }
+}
+
+
+//Static variable
+
+
+import java.util.*;
+
+class Mobile {
+    String brand;
+    int price;
+    static String name;
+
+    public void show() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Price: " + price);
+        System.out.println("Name: " + name);
+    }
+}
+
+public class Main {
+    public static void main(String args[]) {
+        Mobile obj1 = new Mobile();
+        obj1.brand = "Apple";
+        obj1.price = 15000;
+        obj1.name = "iphone";
+
+        Mobile obj2 = new Mobile();
+        obj2.brand = "Samsung";
+        obj2.price = 15000;
+        obj2.name = "m32 5g";
+
+        obj1.name="phone";
+
+        obj1.show();
+        obj2.show();
+    }
+}
