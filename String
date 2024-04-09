@@ -1,0 +1,35 @@
+
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        String name = "navin";
+        name = name+"reddy";
+        System.out.println("hello" + name);
+
+    }
+}
+
+// length  of string
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        String name = "navin";
+        System.out.println(name.length());
+
+    }
+}
+
+
+// add another string
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        String name = "navin";
+        name= name.concat("reddy");
+        System.out.println(name);
+
+
+    }
+}
+
+
