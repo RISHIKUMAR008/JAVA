@@ -1,0 +1,22 @@
+class laptop{
+    String model;
+    int price;
+    public String toString()
+    {
+        return "Hey";
+    }
+}
+public class Main {
+    public static void main(String a[]) {
+        laptop obj = new laptop();
+        obj.model = "Lenevo yoga";
+        obj.price = 100;
+        laptop obj1 = new laptop();
+        obj1.model = "Lenevo yoa";
+        obj1.price = 1000;
+        System.out.println(obj.toString());
+        System.out.println(obj1);
+
+
+    }
+}
