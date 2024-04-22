@@ -1,0 +1,21 @@
+class A {
+    int age;
+    public void show() {
+        System.out.println("Playing Music");
+    }
+
+    static class B { 
+        public void config() {
+            System.out.println("Driving...");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        A obj = new A();
+        obj.show();
+        A.B obj1 = new A.B(); 
+        obj1.config();
+    }
+}
