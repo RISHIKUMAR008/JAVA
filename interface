@@ -1,0 +1,19 @@
+class Laptop {
+    public void code() {
+        System.out.println("code, compile, run");
+    }
+
+    static class Developer {
+        public void devApp(Laptop lap) {
+            lap.code();
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Laptop lap = new Laptop();
+        Laptop.Developer navin = new Laptop.Developer();
+        navin.devApp(lap);
+    }
+}
