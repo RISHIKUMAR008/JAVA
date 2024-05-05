@@ -1,0 +1,40 @@
+class LL {
+    class Node {
+        String data; // data
+        Node next; // node
+
+        Node(String data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    Node head; // head of the list
+
+    public void addFirst(String data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        newNode.next = head;
+        head = newNode;
+    }
+
+    public void printList() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    public static void main(String args[]) {
+        LL list = new LL();
+        list.addFirst("C");
+        list.addFirst("B");
+        list.addFirst("A");
+        list.printList(); // Output should be: A B C
+    }
+}
