@@ -1,0 +1,32 @@
+// Display the sequence of Fibonacci series until the number given by the user. The first two terms of the Fibonacci series are 0 and 1.
+ * The number given by the user for the Fibonacci series should be greater than 5 and less than or equal to 20. Otherwise, display "INVALID INPUT".
+ * If the number given by the user is space, character, or empty, display "INVALID INPUT". The text message should be displayed in the exact format as it is case-sensitive.
+
+import java.util.Scanner;
+
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number between 5 and 20: ");
+        int n = scanner.nextInt();
+
+        if (n < 5 || n > 20) {
+            System.out.println("INVALID INPUT");
+        } else {
+            fibonacciSeries(n);
+        }
+    }
+
+    public static void fibonacciSeries(int n) {
+        int a = 0, b = 1;
+
+        System.out.print("Fibonacci series: ");
+        while (a < n) {
+            System.out.print(a + " ");
+            int temp = a;
+            a = b;
+            b = temp + b;
+        }
+    }
+}
