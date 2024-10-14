@@ -1,0 +1,52 @@
+//We want to estimate the cost of painting a property. Interior wall painting cost is 18 per square feet and 
+exterior wall painting cost is 12 per square feet. Take input as: 1. Number of interior Walls 2. Number of exterior Walls 3.
+Surface Area of each Interior Wall in units of square feet. 4. Surface Area of each Exterior Wall in units of square feet.
+Calculate and display the total cost of painting the property.
+
+
+import java.util.Scanner;
+
+public class PaintingCostCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get input from the user
+        System.out.print("Enter the number of interior walls: ");
+        int numInteriorWalls = scanner.nextInt();
+
+        System.out.print("Enter the number of exterior walls: ");
+        int numExteriorWalls = scanner.nextInt();
+
+        int[] interiorWallAreas = new int[numInteriorWalls];
+        int[] exteriorWallAreas = new int[numExteriorWalls];
+
+        System.out.println("Enter the surface area of each interior wall in square feet:");
+        for (int i = 0; i < numInteriorWalls; i++) {
+            interiorWallAreas[i] = scanner.nextInt();
+        }
+
+        System.out.println("Enter the surface area of each exterior wall in square feet:");
+        for (int i = 0; i < numExteriorWalls; i++) {
+            exteriorWallAreas[i] = scanner.nextInt();
+        }
+
+        // Calculate the total area for each type of wall
+        int totalInteriorArea = 0;
+        for (int area : interiorWallAreas) {
+            totalInteriorArea += area;
+        }
+
+        int totalExteriorArea = 0;
+        for (int area : exteriorWallAreas) {
+            totalExteriorArea += area;
+        }
+
+        // Calculate the total cost
+        double interiorCost = totalInteriorArea * 18;
+        double exteriorCost = totalExteriorArea * 12;
+        double totalCost = interiorCost + exteriorCost;
+
+        // Display the total cost
+        System.out.println("Total cost of painting the property: " + totalCost + " square feet");
+    }
+}
