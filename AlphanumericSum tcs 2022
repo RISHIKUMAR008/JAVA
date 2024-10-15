@@ -1,0 +1,31 @@
+This code first takes the alphanumeric string as input from the user. Then,
+it iterates through each character of the string. If the character is a digit, 
+it extracts its numeric value and adds it to the sum. Finally, it prints the calculated sum.
+
+import java.util.Scanner;
+
+public class AlphanumericSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the alphanumeric string: ");
+        String inputString = scanner.nextLine();
+
+        int sum = calculateSum(inputString);
+        System.out.println("Sum: " + sum);
+    }
+
+    private static int calculateSum(String inputString) {
+        int sum = 0;
+
+        for (int i = 0; i < inputString.length(); i++) {
+            char currentChar = inputString.charAt(i);
+
+            if (Character.isDigit(currentChar)) {
+                sum += Character.getNumericValue(currentChar);
+            }
+        }
+
+        return sum;
+    }
+}
