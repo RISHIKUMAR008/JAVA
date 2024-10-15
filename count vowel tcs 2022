@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class VowelCountAndRemoval {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a text message: ");
+        String text = scanner.nextLine();
+
+        if (text.isEmpty()) {
+            System.out.println("INVALID INPUT");
+        } else {
+            int[] vowelCounts = countVowels(text);
+            String newText = removeVowels(text);
+
+            for (int i = 0; i < vowelCounts.length; i++) {
+                char vowel = (char) ('a' + i);
+                System.out.println(vowel + ": " + vowelCounts[i]);
+            }
+
+            System.out.println(newText);
+        }
+    }
+
+    private static int[] countVowels(String text) {
+        int[] vowelCounts = new int[5];
+        for (int i = 0; i < text.length(); i++) {
+            char c = Character.toLowerCase(text.charAt(i));
+            if (c >= 'a' && c <= 'z') {
+                int index = c - 'a';
+                if (index == 0 || index == 4 || index == 7 || index == 14 || index == 20) {
+                    vowelCounts[index]++;
+                }
+            }
+        }
+        return vowelCounts;
+    }
+
+    private static String removeVowels(String text) {
+        StringBuilder newText = new StringBuilder();
+        for (int i = 0; i < text.length(); i++) {
+            char c = Character.toLowerCase(text.charAt(i));
+            if (c >= 'a' && c <= 'z') {
+                int index = c - 'a';
+                if (index != 0 && index != 4 && index != 7 && index != 14 && index != 20) {
+                    newText.append(c);
+                }
+            } else {
+                newText.append(c);
+            }
+        }
+        return newText.toString();
+    }
+}
