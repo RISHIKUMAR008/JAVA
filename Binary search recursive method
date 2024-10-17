@@ -1,0 +1,43 @@
+import java.util.Arrays;
+
+public class RecursiveBinarySearch {
+
+    // Recursive Binary Search Function
+    public static int binarySearch(int[] array, int left, int right, int target) {
+        if (right >= left) {
+            int middle = left + (right - left) / 2;
+
+            // Check if target is present at the middle
+            if (array[middle] == target) {
+                return middle;
+            }
+
+            // If target is smaller than middle element, search the left subarray
+            if (array[middle] > target) {
+                return binarySearch(array, left, middle - 1, target);
+            }
+
+            // Else search the right subarray
+            return binarySearch(array, middle + 1, right, target);
+        }
+
+        // Target is not present in the array
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {2, 3, 4, 10, 40};
+        int target = 10;
+
+        // Make sure the array is sorted before applying binary search
+        Arrays.sort(array);
+
+        int result = binarySearch(array, 0, array.length - 1, target);
+
+        if (result == -1) {
+            System.out.println("Element not present in array");
+        } else {
+            System.out.println("Element found at index: " + result);
+        }
+    }
+}
