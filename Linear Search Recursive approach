@@ -1,0 +1,29 @@
+public class RecursiveLinearSearch {
+
+    // Recursive Linear Search Function
+    public static int linearSearch(int[] array, int index, int target) {
+        if (index >= array.length) {
+            return -1;  // Base case: target not found
+        }
+
+        if (array[index] == target) {
+            return index;  // Target found, return index
+        }
+
+        // Recursive call to search in the rest of the array
+        return linearSearch(array, index + 1, target);
+    }
+
+    public static void main(String[] args) {
+        int[] array = {2, 3, 4, 10, 40};
+        int target = 10;
+
+        int result = linearSearch(array, 0, target);
+
+        if (result == -1) {
+            System.out.println("Element not present in array");
+        } else {
+            System.out.println("Element found at index: " + result);
+        }
+    }
+}
