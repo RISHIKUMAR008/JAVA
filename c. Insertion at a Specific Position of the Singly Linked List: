@@ -1,0 +1,36 @@
+public static Node insertPos(Node head, int pos, int data)
+{
+    if (pos < 1) {
+        System.out.println("Invalid position!");
+        return head;
+    }
+
+    // Special case for inserting at the head
+    if (pos == 1) {
+        Node temp = new Node(data);
+        temp.next = head;
+        return temp;
+    }
+
+    // Traverse the list to find the node before the
+    // insertion point
+    Node prev = head;
+    int count = 1;
+    while (count < pos - 1 && prev != null) {
+        prev = prev.next;
+        count++;
+    }
+
+    // If position is greater than the number of nodes
+    if (prev == null) {
+        System.out.println("Invalid position!");
+        return head;
+    }
+
+    // Insert the new node at the specified position
+    Node temp = new Node(data);
+    temp.next = prev.next;
+    prev.next = temp;
+
+    return head;
+}
