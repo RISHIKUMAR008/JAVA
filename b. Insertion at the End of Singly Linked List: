@@ -1,0 +1,21 @@
+// Function to insert a node at the end of the linked list
+public static Node insertAtEnd(Node head, int value)
+{
+    // Create a new node with the given value
+    Node newNode = new Node(value);
+
+    // If the list is empty, make the new node the head
+    if (head == null)
+        return newNode;
+
+    // Traverse the list until the last node is reached
+    Node curr = head;
+    while (curr.next != null) {
+        curr = curr.next;
+    }
+
+    // Link the new node to the current last node
+    curr.next = newNode;
+
+    return head;
+}
