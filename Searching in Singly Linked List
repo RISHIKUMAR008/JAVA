@@ -1,0 +1,21 @@
+// Java function to search for a value in the Linked List
+public boolean searchLinkedList(Node head, int target)
+{
+    // Traverse the Linked List
+    while (head != null) {
+
+        // Check if the current node's data matches the
+        // target value
+        if (head.data == target) {
+
+            // Value found
+            return true;
+        }
+
+        // Move to the next node
+        head = head.next;
+    }
+
+    // Value not found
+    return false;
+}
