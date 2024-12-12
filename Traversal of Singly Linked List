@@ -1,0 +1,20 @@
+// Java Function to traverse and print the elements of the
+// linked list
+public static void traverseLinkedList(Node head)
+{
+    // Start from the head of the linked list
+    Node current = head;
+
+    // Traverse the linked list until reaching the end
+    // (null)
+    while (current != null) {
+
+        // Print the data of the current node
+        System.out.print(current.data + " ");
+
+        // Move to the next node
+        current = current.next;
+    }
+
+    System.out.println();
+}
