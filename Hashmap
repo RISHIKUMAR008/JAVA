@@ -1,0 +1,29 @@
+import java.util.HashMap;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a HashMap
+        HashMap<String, Integer> map = new HashMap<>();
+
+        // Add elements to the HashMap
+        map.put("Alice", 25);
+        map.put("Bob", 30);
+        map.put("Charlie", 35);
+
+        // Access elements
+        System.out.println("Alice's age: " + map.get("Alice"));
+
+        // Remove an element
+        map.remove("Bob");
+
+        // Check if a key exists
+        if (map.containsKey("Charlie")) {
+            System.out.println("Charlie is in the map.");
+        }
+
+        // Iterate through the HashMap
+        for (String key : map.keySet()) {
+            System.out.println(key + " -> " + map.get(key));
+        }
+    }
+}
